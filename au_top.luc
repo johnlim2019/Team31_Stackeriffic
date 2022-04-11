@@ -1,0 +1,96 @@
+module au_top (
+    input clk,              // 100MHz clock
+    input rst_n,            // reset button (active low)
+    output led [8],         // 8 user controllable LEDs
+    input usb_rx,           // USB->Serial input
+    output usb_tx,          // USB->Serial output
+    output io_led [3][8],   // LEDs on IO Shield
+    output io_seg [8],      // 7-segment LEDs on IO Shield
+    output io_sel [4],      // Digit select on IO Shield
+    input io_button [5],    // 5 buttons on IO Shield
+    //   0
+    // 3 1 4
+    //   2
+    input io_dip [3][8]     // DIP switches on IO Shield
+  ) {
+  
+      sig rst;   
+      alu_manual alu_manual;               
+    // declare modules
+   .clk(clk) {
+
+    // The reset conditioner is used to synchronize the reset signal to the FPGA
+    // clock. This ensures the entire FPGA comes out of reset at the same time.
+    reset_conditioner reset_cond;
+    // this module checks if we are pressing any of the 5 io buttons
+    button_conditioner buttoncond[5];
+    .rst(rst){
+      // declare our module to address the segment         
+      multi_seven_seg seg;
+        dff store_a[16](#INIT(0),.clk(clk), .rst(rst));  // to store value a
+        dff store_b[16](#INIT(0),.clk(clk), .rst(rst));  // to store value b             
+        dff store_alufn[6](#INIT(0),.clk(clk), .rst(rst));  // to store value alufn 
+        dff store_s[16](#INIT(0),.clk(clk), .rst(rst)); 
+        dff store_zvn[3](#INIT(0),.clk(clk), .rst(rst));
+      // declare our test module
+      
+    }
+  }
+
+  always {
+    reset_cond.in = ~rst_n; // input raw inverted reset signal
+    rst = reset_cond.out;   // conditioned reset
+    usb_tx = usb_rx;        // loop serial port
+    
+    led = 8h00;             // turn LEDs off
+    io_led = 3x{{8h00}};    // turn io LEDs off 
+    
+    //  always read the registers
+    alu.x = store_a.q;
+    alu.y = store_b.q;
+    alu.op = store_alufn.q;
+    // always load s into its register
+    store_s.d = alu.s;
+    // load flag register
+    store_zvn.d[2] = alu.z;
+    store_zvn.d[1] = alu.v;
+    store_zvn.d[0] = alu.n;
+    // connect led to zvn
+    io_led[2][7:5] = store_zvn.q;
+    
+    
+    // always load left dip into the alufn reg
+    store_alufn.d = io_dip[2][7:2];
+    
+    // load the dip input into according registers 
+    if (a_detector.out == 1){
+       store_a.d[15:8] = io_dip[1][7:0];
+       store_a.d[7:0] = io_dip[0][7:0];
+    }
+    if (b_detector.out == 1){
+       store_b.d[15:8] = io_dip[1][7:0];
+       store_b.d[7:0] = io_dip[0][7:0];
+    }
+    
+    buttoncond.in = io_button[4:0];
+    
+    io_led[2][0] = io_button[1];
+    io_led[2][0] = io_button[0];
+    io_led[1][7:0] = io_dip[1][7:0];        
+    io_led[0][7:0] = io_dip[0][7:0];        
+
+    a_detector.in = buttoncond.out[0];
+    b_detector.in = buttoncond.out[1];
+    
+    
+        
+     // connect s output to segment's values
+     //seg.values = {4he,4hf,4hc,4hd};
+     seg.values = {store_s.q[15:12],store_s.q[11:8],store_s.q[7:4],store_s.q[3:0]};
+     io_seg = ~seg.seg;          //  select needed segments, we do bitwise inversion as 0 indicates selected segment
+     io_sel = ~seg.sel;           // select all needed digits
+    
+   
+      
+  }
+}
