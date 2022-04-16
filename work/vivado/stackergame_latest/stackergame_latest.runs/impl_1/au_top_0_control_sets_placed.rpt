@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Apr 16 16:59:30 2022
+| Date         : Sat Apr 16 17:09:00 2022
 | Host         : DESKTOP-1I22819 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file au_top_0_control_sets_placed.rpt
 | Design       : au_top_0
@@ -78,16 +78,16 @@ Table of Contents
 |  clk_IBUF_BUFG |                                                                                  |                                   |                5 |              8 |         1.60 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/E[0]                                 | reset_cond/Q[0]                   |                6 |             12 |         2.00 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/FSM_onehot_M_game_fsm_q_reg[48][0]   | reset_cond/Q[0]                   |                8 |             16 |         2.00 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/FSM_onehot_M_game_fsm_q_reg[48]_2[0] | reset_cond/Q[0]                   |               11 |             16 |         1.45 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/FSM_onehot_M_game_fsm_q_reg[48]_0[0] | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/FSM_onehot_M_game_fsm_q_reg[48]_1[0] | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_24[0]               | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_25[0]               | reset_cond/Q[0]                   |                8 |             16 |         2.00 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_23[0]               | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_22[0]               | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/FSM_onehot_M_game_fsm_q_reg[48]_2[0] | reset_cond/Q[0]                   |               11 |             16 |         1.45 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_20[0]               | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_21[0]               | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_22[0]               | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_25[0]               | reset_cond/Q[0]                   |                8 |             16 |         2.00 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_26[0]               | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_23[0]               | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/M_stage_q_reg[3]_24[0]               | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
 |  clk_IBUF_BUFG | btn_cond/sel                                                                     | btn_cond/sync/clear               |                5 |             20 |         4.00 |
 |  clk_IBUF_BUFG | debug_cond/M_ctr_q[0]_i_2_n_0                                                    | debug_cond/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_counter/FSM_onehot_M_game_fsm_q_reg[11][0]   | reset_cond/Q[0]                   |               25 |             49 |         1.96 |

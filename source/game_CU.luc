@@ -20,7 +20,7 @@ module game_CU (
   )
   {
   edge_detector frame_counter(#RISE(1),#FALL(0),.clk(clk));
-  const SLOWCLOCK_SIZE  = $clog2(4700000);
+  const SLOWCLOCK_SIZE  = $clog2(4000000);
   counter frame_rate(#SIZE(SLOWCLOCK_SIZE),.clk(clk),.rst(rst));
   
   const SLOWCLOCK_SIZE2 = $clog2(8000000);
@@ -32,7 +32,7 @@ module game_CU (
   const SLOWCLOCK_SIZE4 = $clog2(8500000);
   counter frame_rate4(#SIZE(SLOWCLOCK_SIZE4),.clk(clk),.rst(rst));
   
-  const SLOWCLOCK_SIZE5 = $clog2(11700000);
+  const SLOWCLOCK_SIZE5 = $clog2(12000000);
   counter frame_rate5(#SIZE(SLOWCLOCK_SIZE5),.clk(clk),.rst(rst));
   .clk(clk){
     
