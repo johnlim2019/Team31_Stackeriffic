@@ -15,9 +15,9 @@ module matrix_writer_10 (
   
   
   
-  localparam CLOCKSIZE = 3'h6;
+  localparam CLOCKSIZE = 3'h7;
   
-  wire [6-1:0] M_slowClock_value;
+  wire [7-1:0] M_slowClock_value;
   counter_15 slowClock (
     .clk(clk),
     .rst(rst),
@@ -50,7 +50,7 @@ module matrix_writer_10 (
     outled = 8'hff;
     outgnd = 8'h00;
     clkout = M_slowclk_detector_out;
-    M_slowclk_detector_in = M_slowClock_value[5+0-:1];
+    M_slowclk_detector_in = M_slowClock_value[6+0-:1];
     
     case (M_row_case_q)
       ROW0_row_case: begin

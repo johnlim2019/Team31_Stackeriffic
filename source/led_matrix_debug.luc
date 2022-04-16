@@ -123,26 +123,26 @@ module led_matrix_debug (
     if (selector[0] == 1){
       case(animate.q){
         animate.FRAME1:
-          matrix_writer.row[0]=FRAME01;
-          matrix_writer.row[1]=FRAME02;
-          matrix_writer.row[2]=FRAME03;
-          matrix_writer.row[3]=FRAME04;
-          matrix_writer.row[4]=FRAME05;
-          matrix_writer.row[5]=FRAME06;
-          matrix_writer.row[6]=FRAME07;
-          matrix_writer.row[7]=FRAME08;  
+          matrix_writer.row[0]=FRAME01[7:0];
+          matrix_writer.row[1]=FRAME02[7:0];
+          matrix_writer.row[2]=FRAME03[7:0];
+          matrix_writer.row[3]=FRAME04[7:0];
+          matrix_writer.row[4]=FRAME05[7:0];
+          matrix_writer.row[5]=FRAME06[7:0];
+          matrix_writer.row[6]=FRAME07[7:0];
+          matrix_writer.row[7]=FRAME08[7:0];  
           if (frame_counter.out ==1){
            animate.d = animate.FRAME2;
           }
         animate.FRAME2:
-          matrix_writer.row[0]=FRAME11;
-          matrix_writer.row[1]=FRAME12;
-          matrix_writer.row[2]=FRAME13;
-          matrix_writer.row[3]=FRAME14;
-          matrix_writer.row[4]=FRAME15;
-          matrix_writer.row[5]=FRAME16;
-          matrix_writer.row[6]=FRAME17;
-          matrix_writer.row[7]=FRAME18;  
+          matrix_writer.row[0]=FRAME11[7:0];
+          matrix_writer.row[1]=FRAME12[7:0];
+          matrix_writer.row[2]=FRAME13[7:0];
+          matrix_writer.row[3]=FRAME14[7:0];
+          matrix_writer.row[4]=FRAME15[7:0];
+          matrix_writer.row[5]=FRAME16[7:0];
+          matrix_writer.row[6]=FRAME17[7:0];
+          matrix_writer.row[7]=FRAME18[7:0];  
           if (frame_counter.out ==1){
            animate.d = animate.FRAME1;
           }
@@ -159,14 +159,14 @@ module led_matrix_debug (
       matrix_writer.row[7]=8b11111111;       
     }
     else {
-      matrix_writer.row[0]=ROW01;
-      matrix_writer.row[1]=ROW11;
-      matrix_writer.row[2]=ROW21;
-      matrix_writer.row[3]=ROW31;
-      matrix_writer.row[4]=ROW41;
-      matrix_writer.row[5]=ROW51;
-      matrix_writer.row[6]=ROW61;
-      matrix_writer.row[7]=ROW71; 
+      matrix_writer.row[0]=ROW01[7:0];
+      matrix_writer.row[1]=ROW11[7:0];
+      matrix_writer.row[2]=ROW21[7:0];
+      matrix_writer.row[3]=ROW31[7:0];
+      matrix_writer.row[4]=ROW41[7:0];
+      matrix_writer.row[5]=ROW51[7:0];
+      matrix_writer.row[6]=ROW61[7:0];
+      matrix_writer.row[7]=ROW71[7:0]; 
       
     }
 }

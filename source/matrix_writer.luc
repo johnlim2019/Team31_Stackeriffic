@@ -6,7 +6,7 @@ module matrix_writer (
     output outgnd[8],
     output clkout
   ) {
-  const CLOCKSIZE = 6;  
+  const CLOCKSIZE = $clog2(100);  
   counter slowClock(#SIZE(CLOCKSIZE),.clk(clk),.rst(rst));      
   edge_detector slowclk_detector(#RISE(1), #FALL(0),.clk(clk));
   fsm row_case(#INIT(ROW0), .clk(clk), .rst(rst)) = {

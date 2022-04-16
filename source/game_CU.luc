@@ -20,19 +20,19 @@ module game_CU (
   )
   {
   edge_detector frame_counter(#RISE(1),#FALL(0),.clk(clk));
-  const SLOWCLOCK_SIZE  = $clog2(6000000);
+  const SLOWCLOCK_SIZE  = $clog2(4700000);
   counter frame_rate(#SIZE(SLOWCLOCK_SIZE),.clk(clk),.rst(rst));
   
-  const SLOWCLOCK_SIZE2 = $clog2(7000000);
+  const SLOWCLOCK_SIZE2 = $clog2(8000000);
   counter frame_rate2(#SIZE(SLOWCLOCK_SIZE2),.clk(clk),.rst(rst));
   
   const SLOWCLOCK_SIZE3 = $clog2(8000000);
   counter frame_rate3(#SIZE(SLOWCLOCK_SIZE3),.clk(clk),.rst(rst));
   
-  const SLOWCLOCK_SIZE4 = $clog2(9000000);
+  const SLOWCLOCK_SIZE4 = $clog2(8500000);
   counter frame_rate4(#SIZE(SLOWCLOCK_SIZE4),.clk(clk),.rst(rst));
   
-  const SLOWCLOCK_SIZE5 = $clog2(12000000);
+  const SLOWCLOCK_SIZE5 = $clog2(11700000);
   counter frame_rate5(#SIZE(SLOWCLOCK_SIZE5),.clk(clk),.rst(rst));
   .clk(clk){
     
@@ -415,6 +415,7 @@ module game_CU (
           state_counter.d = 19;  // show which state we are in
           level_reg.d = 0;
           
+          //game_fsm.d = game_fsm.DEBUG;
           if (button){
             game_fsm.d = game_fsm.IDLE; // hold the screen and until press button
           }else{
