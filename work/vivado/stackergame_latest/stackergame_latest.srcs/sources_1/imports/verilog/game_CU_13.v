@@ -34,9 +34,9 @@ module game_CU_13 (
     .out(M_frame_counter_out)
   );
   
-  localparam SLOWCLOCK_SIZE = 5'h17;
+  localparam SLOWCLOCK_SIZE = 5'h16;
   
-  wire [23-1:0] M_frame_rate_value;
+  wire [22-1:0] M_frame_rate_value;
   counter_21 frame_rate (
     .clk(clk),
     .rst(rst),
@@ -46,7 +46,7 @@ module game_CU_13 (
   localparam SLOWCLOCK_SIZE2 = 5'h17;
   
   wire [23-1:0] M_frame_rate2_value;
-  counter_21 frame_rate2 (
+  counter_22 frame_rate2 (
     .clk(clk),
     .rst(rst),
     .value(M_frame_rate2_value)
@@ -55,7 +55,7 @@ module game_CU_13 (
   localparam SLOWCLOCK_SIZE3 = 5'h17;
   
   wire [23-1:0] M_frame_rate3_value;
-  counter_21 frame_rate3 (
+  counter_22 frame_rate3 (
     .clk(clk),
     .rst(rst),
     .value(M_frame_rate3_value)
@@ -64,7 +64,7 @@ module game_CU_13 (
   localparam SLOWCLOCK_SIZE4 = 5'h18;
   
   wire [24-1:0] M_frame_rate4_value;
-  counter_22 frame_rate4 (
+  counter_23 frame_rate4 (
     .clk(clk),
     .rst(rst),
     .value(M_frame_rate4_value)
@@ -73,7 +73,7 @@ module game_CU_13 (
   localparam SLOWCLOCK_SIZE5 = 5'h18;
   
   wire [24-1:0] M_frame_rate5_value;
-  counter_22 frame_rate5 (
+  counter_23 frame_rate5 (
     .clk(clk),
     .rst(rst),
     .value(M_frame_rate5_value)
@@ -150,7 +150,7 @@ module game_CU_13 (
     end
     M_frame_counter_in = 1'h0;
     if (M_level_reg_q == 3'h4) begin
-      M_frame_counter_in = M_frame_rate_value[22+0-:1];
+      M_frame_counter_in = M_frame_rate_value[21+0-:1];
     end else begin
       if (M_level_reg_q == 2'h3) begin
         M_frame_counter_in = M_frame_rate2_value[22+0-:1];
@@ -912,8 +912,6 @@ module game_CU_13 (
   end
   
   always @(posedge clk) begin
-    M_game_fsm_q <= M_game_fsm_d;
-    
     if (rst == 1'b1) begin
       M_state_counter_q <= 1'h0;
       M_level_reg_q <= 1'h0;
@@ -923,6 +921,8 @@ module game_CU_13 (
       M_level_reg_q <= M_level_reg_d;
       M_line_counter_q <= M_line_counter_d;
     end
+    
+    M_game_fsm_q <= M_game_fsm_d;
   end
   
 endmodule

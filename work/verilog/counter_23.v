@@ -6,24 +6,24 @@
 
 /*
    Parameters:
-     SIZE = SLOWCLOCK_SIZE
+     SIZE = SLOWCLOCK_SIZE4
      DIV = 0
      TOP = 0
      UP = 1
 */
-module counter_21 (
+module counter_23 (
     input clk,
     input rst,
-    output reg [21:0] value
+    output reg [23:0] value
   );
   
-  localparam SIZE = 5'h16;
+  localparam SIZE = 5'h18;
   localparam DIV = 1'h0;
   localparam TOP = 1'h0;
   localparam UP = 1'h1;
   
   
-  reg [21:0] M_ctr_d, M_ctr_q = 1'h0;
+  reg [23:0] M_ctr_d, M_ctr_q = 1'h0;
   
   localparam MAX_VALUE = 1'h0;
   

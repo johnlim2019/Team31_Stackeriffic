@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Apr 16 17:10:10 2022
+| Date         : Sat Apr 16 17:20:24 2022
 | Host         : DESKTOP-1I22819 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file au_top_0_methodology_drc_routed.rpt -pb au_top_0_methodology_drc_routed.pb -rpx au_top_0_methodology_drc_routed.rpx
 | Design       : au_top_0
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 93
+             Violations found: 84
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-16 | Warning  | Large setup violation         | 10         |
+| TIMING-16 | Warning  | Large setup violation         | 1          |
 | TIMING-18 | Warning  | Missing input or output delay | 83         |
 +-----------+----------+-------------------------------+------------+
 
@@ -35,52 +35,7 @@ Table of Contents
 -----------------
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -1.008 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[33]/C (clocked by clk_0) and cu_test/beta/players/M_and_result_r9_q_reg[1]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#2 Warning
-Large setup violation  
-There is a large setup violation of -1.015 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[20]/C (clocked by clk_0) and cu_test/beta/players/M_line8_r8_q_reg[9]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#3 Warning
-Large setup violation  
-There is a large setup violation of -1.036 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[20]/C (clocked by clk_0) and cu_test/beta/players/M_line3_r3_q_reg[9]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#4 Warning
-Large setup violation  
-There is a large setup violation of -1.037 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[33]/C (clocked by clk_0) and cu_test/beta/players/M_line4_r4_q_reg[15]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#5 Warning
-Large setup violation  
-There is a large setup violation of -1.073 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[33]/C (clocked by clk_0) and cu_test/beta/players/M_line2_r2_q_reg[15]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#6 Warning
-Large setup violation  
-There is a large setup violation of -1.080 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[33]/C (clocked by clk_0) and cu_test/beta/players/M_line6_r6_q_reg[15]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#7 Warning
-Large setup violation  
-There is a large setup violation of -1.095 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[33]/C (clocked by clk_0) and cu_test/beta/players/M_current_line_r11_q_reg[15]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#8 Warning
-Large setup violation  
-There is a large setup violation of -1.102 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[33]/C (clocked by clk_0) and cu_test/beta/players/M_line3_r3_q_reg[15]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#9 Warning
-Large setup violation  
-There is a large setup violation of -1.124 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[33]/C (clocked by clk_0) and cu_test/beta/players/M_line8_r8_q_reg[15]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
-Related violations: <none>
-
-TIMING-16#10 Warning
-Large setup violation  
-There is a large setup violation of -1.265 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[20]/C (clocked by clk_0) and cu_test/beta/players/M_gamestate_r0_q_reg[9]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -1.060 ns between cu_test/beta/game_controlunit/FSM_onehot_M_game_fsm_q_reg[37]/C (clocked by clk_0) and cu_test/beta/players/M_line5_r5_q_reg[13]/D (clocked by clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning

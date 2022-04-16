@@ -32,7 +32,7 @@ module game_CU (
   const SLOWCLOCK_SIZE4 = $clog2(8500000);
   counter frame_rate4(#SIZE(SLOWCLOCK_SIZE4),.clk(clk),.rst(rst));
   
-  const SLOWCLOCK_SIZE5 = $clog2(12000000);
+  const SLOWCLOCK_SIZE5 = $clog2(12500000);
   counter frame_rate5(#SIZE(SLOWCLOCK_SIZE5),.clk(clk),.rst(rst));
   .clk(clk){
     
@@ -82,9 +82,9 @@ module game_CU (
       SHIFTR6, //37
       SHIFTR7, //38
       SHIFTR8, //39
-      LOSE, 
-      LEVELUP, 
-      RESETLINE, 
+      LOSE,
+      LEVELUP,
+      RESETLINE,
       INCREASESCORE,
       CHECKLOSE,
       MINUS8,
@@ -409,7 +409,7 @@ module game_CU (
           }
         
         game_fsm.LOSE:
-          wdsel = b01; // write 0 to the reg0 
+          wdsel = b01; // write 0 to the reg0
           regfile_write_address = b0000;
           we = b1;
           state_counter.d = 19;  // show which state we are in

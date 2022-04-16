@@ -92,6 +92,7 @@ read_verilog -library xil_defaultlib {
   {C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.srcs/sources_1/imports/verilog/counter_15.v}
   {C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.srcs/sources_1/imports/verilog/counter_21.v}
   {C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.srcs/sources_1/imports/verilog/counter_22.v}
+  {C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.srcs/sources_1/imports/verilog/counter_23.v}
   {C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.srcs/sources_1/imports/verilog/counter_6.v}
   {C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.srcs/sources_1/imports/verilog/cu_test_3.v}
   {C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.srcs/sources_1/imports/verilog/decoder_8.v}
