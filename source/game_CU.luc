@@ -29,7 +29,7 @@ module game_CU (
   const SLOWCLOCK_SIZE3 = $clog2(8000000);
   counter frame_rate3(#SIZE(SLOWCLOCK_SIZE3),.clk(clk),.rst(rst));
   
-  const SLOWCLOCK_SIZE4 = $clog2(8500000);
+  const SLOWCLOCK_SIZE4 = $clog2(1200000);
   counter frame_rate4(#SIZE(SLOWCLOCK_SIZE4),.clk(clk),.rst(rst));
   
   const SLOWCLOCK_SIZE5 = $clog2(12000000);
