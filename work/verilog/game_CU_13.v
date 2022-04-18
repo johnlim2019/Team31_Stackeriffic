@@ -485,7 +485,7 @@ module game_CU_13 (
         CHECK6_game_fsm: begin
           alufn = 6'h18;
           regfile_read_address_a = 4'h6;
-          regfile_read_address_b = 4'h4;
+          regfile_read_address_b = 4'h5;
           regfile_write_address = 4'h9;
           we = 1'h1;
           asel = 2'h0;

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Mon Apr 18 16:16:48 2022
+| Date             : Mon Apr 18 19:04:06 2022
 | Host             : DESKTOP-1I22819 running 64-bit major release  (build 9200)
 | Command          : report_power -file au_top_0_power_routed.rpt -pb au_top_0_power_summary_routed.pb -rpx au_top_0_power_routed.rpx
 | Design           : au_top_0
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.001 |     1308 |       --- |             --- |
-|   LUT as Logic |     0.001 |      743 |     20800 |            3.57 |
+| Slice Logic    |     0.001 |     1342 |       --- |             --- |
+|   LUT as Logic |     0.001 |      762 |     20800 |            3.66 |
 |   CARRY4       |    <0.001 |       37 |      8150 |            0.45 |
-|   Register     |    <0.001 |      409 |     41600 |            0.98 |
-|   F7/F8 Muxes  |    <0.001 |       11 |     32600 |            0.03 |
+|   Register     |    <0.001 |      411 |     41600 |            0.99 |
+|   F7/F8 Muxes  |    <0.001 |       24 |     32600 |            0.07 |
 |   Others       |     0.000 |       33 |       --- |             --- |
-| Signals        |     0.002 |     1189 |       --- |             --- |
+| Signals        |     0.002 |     1219 |       --- |             --- |
 | I/O            |     0.019 |       77 |       170 |           45.29 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.097 |          |           |                 |
@@ -72,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.007 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.013 |       0.001 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.006 |       0.005 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -142,10 +142,10 @@ Table of Contents
 | Name                   | Power (W) |
 +------------------------+-----------+
 | au_top_0               |     0.025 |
-|   cu_test              |     0.005 |
+|   cu_test              |     0.004 |
 |     beta               |     0.004 |
 |       game_controlunit |     0.003 |
-|       players          |     0.002 |
+|       players          |     0.001 |
 +------------------------+-----------+
 
 

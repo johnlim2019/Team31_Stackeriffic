@@ -53,7 +53,8 @@ module au_top (
   }
 
   always {
-    reset_cond.in = reset; // input raw inverted reset signal
+    reset_cond.in = ~rst_n; //inverted rst_n
+    reset_cond.in = reset;  // normal reset signal for black button
     rst = reset_cond.out;   // conditioned reset
     usb_tx = usb_rx;        // loop serial port
     
@@ -66,7 +67,7 @@ module au_top (
     
     // connect buttons
     debug_cond.in = io_button[1];      
-    cu_test.speedSel = io_dip[2][7:0];
+    cu_test.speedSel = io_dip[2][7:5];
     debugdetect.in = debug_cond.out;
     cu_test.updateSpeed = debugdetect.out;
     io_led[2][7] = debugdetect.out;
