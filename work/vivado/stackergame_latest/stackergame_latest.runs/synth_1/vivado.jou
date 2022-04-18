@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Apr 16 17:13:26 2022
-# Process ID: 17928
+# Start of session at: Mon Apr 18 16:05:52 2022
+# Process ID: 10348
 # Current directory: C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.runs/synth_1
 # Command line: vivado.exe -log au_top_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source au_top_0.tcl
 # Log file: C:/Users/cajhm/OneDrive - Singapore University of Technology and Design/Y2T4/compstruct1d/stackergame_latest/work/vivado/stackergame_latest/stackergame_latest.runs/synth_1/au_top_0.vds

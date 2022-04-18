@@ -912,6 +912,8 @@ module game_CU_13 (
   end
   
   always @(posedge clk) begin
+    M_game_fsm_q <= M_game_fsm_d;
+    
     if (rst == 1'b1) begin
       M_state_counter_q <= 1'h0;
       M_level_reg_q <= 1'h0;
@@ -921,8 +923,6 @@ module game_CU_13 (
       M_level_reg_q <= M_level_reg_d;
       M_line_counter_q <= M_line_counter_d;
     end
-    
-    M_game_fsm_q <= M_game_fsm_d;
   end
   
 endmodule

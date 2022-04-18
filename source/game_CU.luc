@@ -32,7 +32,7 @@ module game_CU (
   const SLOWCLOCK_SIZE4 = $clog2(8500000);
   counter frame_rate4(#SIZE(SLOWCLOCK_SIZE4),.clk(clk),.rst(rst));
   
-  const SLOWCLOCK_SIZE5 = $clog2(12500000);
+  const SLOWCLOCK_SIZE5 = $clog2(12000000);
   counter frame_rate5(#SIZE(SLOWCLOCK_SIZE5),.clk(clk),.rst(rst));
   .clk(clk){
     
@@ -475,7 +475,7 @@ module game_CU (
         game_fsm.CHECK6:
           alufn = b011000;
           regfile_read_address_a = b0110;
-          regfile_read_address_b = b0100;
+          regfile_read_address_b = b0101;
           regfile_write_address = b1001;
           we = b1;
           asel = b00;
@@ -787,7 +787,6 @@ module game_CU (
             game_fsm.d = game_fsm.SHIFTL6;
           } else {
             if (frame_counter.out ==1) { // wait to draw next frame
-              
               alufn = b100001;
               regfile_read_address_a = b0110;
               regfile_write_address = b0110;

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Apr 16 17:19:14 2022
+| Date         : Mon Apr 18 16:15:04 2022
 | Host         : DESKTOP-1I22819 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file au_top_0_control_sets_placed.rpt
 | Design       : au_top_0
@@ -77,19 +77,19 @@ Table of Contents
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/M_line_counter_q[3]_i_1_n_0                    | reset_cond/Q[0]                   |                1 |              4 |         4.00 |
 |  clk_IBUF_BUFG |                                                                              |                                   |                7 |              8 |         1.14 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/FSM_onehot_M_game_fsm_q_reg[24][0] | reset_cond/Q[0]                   |                6 |             12 |         2.00 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_15[0]             | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_20[0]             | reset_cond/Q[0]                   |                8 |             16 |         2.00 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_25[0]             | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_16[0]             | reset_cond/Q[0]                   |               11 |             16 |         1.45 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_17[0]             | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_19[0]             | reset_cond/Q[0]                   |                8 |             16 |         2.00 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_21[0]             | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_22[0]             | reset_cond/Q[0]                   |               11 |             16 |         1.45 |
-|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_23[0]             | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_24[0]             | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_22[0]             | reset_cond/Q[0]                   |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_25[0]             | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_20[0]             | reset_cond/Q[0]                   |                8 |             16 |         2.00 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_18[0]             | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
-|  clk_IBUF_BUFG | btn_cond/sel                                                                 | btn_cond/sync/clear               |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_19[0]             | reset_cond/Q[0]                   |                8 |             16 |         2.00 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_23[0]             | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_16[0]             | reset_cond/Q[0]                   |               11 |             16 |         1.45 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_21[0]             | reset_cond/Q[0]                   |               10 |             16 |         1.60 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_15[0]             | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
+|  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/M_stage_q_reg[3]_17[0]             | reset_cond/Q[0]                   |                9 |             16 |         1.78 |
 |  clk_IBUF_BUFG | debug_cond/M_ctr_q[0]_i_2_n_0                                                | debug_cond/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG | btn_cond/sel                                                                 | btn_cond/sync/clear               |                6 |             20 |         3.33 |
 |  clk_IBUF_BUFG | cu_test/beta/game_controlunit/frame_rate2/E[0]                               | reset_cond/Q[0]                   |               28 |             49 |         1.75 |
 |  clk_IBUF_BUFG |                                                                              | reset_cond/Q[0]                   |               42 |            116 |         2.76 |
 +----------------+------------------------------------------------------------------------------+-----------------------------------+------------------+----------------+--------------+

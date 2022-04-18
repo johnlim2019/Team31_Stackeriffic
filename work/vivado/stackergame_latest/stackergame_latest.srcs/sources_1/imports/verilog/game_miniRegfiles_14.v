@@ -185,45 +185,9 @@ module game_miniRegfiles_14 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_line7_r7_q <= 16'h0031;
-    end else begin
-      M_line7_r7_q <= M_line7_r7_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_line3_r3_q <= 16'h005e;
-    end else begin
-      M_line3_r3_q <= M_line3_r3_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_line4_r4_q <= 16'h00df;
-    end else begin
-      M_line4_r4_q <= M_line4_r4_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
       M_line5_r5_q <= 16'h00d6;
     end else begin
       M_line5_r5_q <= M_line5_r5_d;
-    end
-  end
-  
-  
-  always @(posedge clk) begin
-    if (rst == 1'b1) begin
-      M_line8_r8_q <= 16'h0063;
-    end else begin
-      M_line8_r8_q <= M_line8_r8_d;
     end
   end
   
@@ -239,18 +203,18 @@ module game_miniRegfiles_14 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_line6_r6_q <= 16'h001f;
+      M_current_line_r11_q <= 1'h0;
     end else begin
-      M_line6_r6_q <= M_line6_r6_d;
+      M_current_line_r11_q <= M_current_line_r11_d;
     end
   end
   
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_current_line_r11_q <= 1'h0;
+      M_line2_r2_q <= 16'h007e;
     end else begin
-      M_current_line_r11_q <= M_current_line_r11_d;
+      M_line2_r2_q <= M_line2_r2_d;
     end
   end
   
@@ -275,9 +239,45 @@ module game_miniRegfiles_14 (
   
   always @(posedge clk) begin
     if (rst == 1'b1) begin
-      M_line2_r2_q <= 16'h007e;
+      M_line4_r4_q <= 16'h00df;
     end else begin
-      M_line2_r2_q <= M_line2_r2_d;
+      M_line4_r4_q <= M_line4_r4_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_line3_r3_q <= 16'h005e;
+    end else begin
+      M_line3_r3_q <= M_line3_r3_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_line7_r7_q <= 16'h0031;
+    end else begin
+      M_line7_r7_q <= M_line7_r7_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_line8_r8_q <= 16'h0063;
+    end else begin
+      M_line8_r8_q <= M_line8_r8_d;
+    end
+  end
+  
+  
+  always @(posedge clk) begin
+    if (rst == 1'b1) begin
+      M_line6_r6_q <= 16'h001f;
+    end else begin
+      M_line6_r6_q <= M_line6_r6_d;
     end
   end
   
